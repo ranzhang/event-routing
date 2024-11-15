@@ -5,7 +5,7 @@ app = FastAPI()
 
 # Define the base URLs for the different systems
 
-systems = []
+systems = ["system1", "system2", "system3", "system4"]
 
 @app.get("/api/v1/{system_name}")
 async def get_data(system_name: str):
@@ -20,5 +20,4 @@ async def get_data(system_name: str):
     
     if system_name == "system3":
         return {"data": "data from system3"}
-    
     
