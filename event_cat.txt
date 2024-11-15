@@ -1,5 +1,5 @@
 This file provides mapping of event categories to systems: replace {category} with the actual category of events
-For fire, flooding, earthquake events, the system to use is localhost:8000/{category}, api key is acTn0W1,
-For burglary, crime, public safety, the system to use is localhost:8001/{category}, api key is acTn0W2
-For health emergencies, use the system localhost:8000/{category}, api key is acTn0W3
-For routine helps, use the system localhost:8000/{category}, api key is acTn0W4
+For fire, flooding, earthquake events, the system to use is localhost:8000/api/v1/{category}, api key is acTn0W1,
+For burglary, crime, public safety, the system to use is localhost:8001/api/v1/{category}, api key is acTn0W2
+For health emergencies, use the system localhost:8000/api/v1/{category}, api key is acTn0W3
+For routine helps, use the system localhost:8000/api/v1/{category}, api key is acTn0W4
