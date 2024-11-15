@@ -162,7 +162,6 @@ st.set_page_config(
 
 
 st.markdown("# Run Disaster Agent")
-st.markdown("The Disaster Agent is a tool to help you understand the type of event, is it critical that need emergency help, or is it a routine event. Then you take an appropriate actions through the following tasks.")
 agents = st.button("Start the Agents!", type="primary")
 
 
