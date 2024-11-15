@@ -8,5 +8,9 @@ The system is instantiated by Autogen with 4 AI agents:
 - Code_critic: review the code and fix any errors
 - Event_guide: parse the API return and provide helpful and succint instructions to handle the event
 
+The fastapi is provided for testing purpose. To start the service, run:
+fastapi dev service/main.py
 
+You may need to install the package before that:
+pip install fastapi
 
