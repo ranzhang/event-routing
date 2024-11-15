@@ -1,5 +1,5 @@
 system,endpoint
-emsys1.com,/v1/get/live_data
-emsys2.com,/v1/get/live_data
-emsys3.com,/v1/get/live_data
-emsys4.com,/v1/get/live_data
+localhost,/v1/get/live_data
+localhost,/v1/get/live_data
+localhost,/v1/get/live_data
+localhost,/v1/get/live_data

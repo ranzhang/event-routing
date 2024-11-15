@@ -1,5 +1,5 @@
 This file provides mapping of event categories to systems:
-For fire, flooding, earthquake events, the system to use is emsys1.com, api key is acTn0W1
-For burglary, crime, public safety, the system to use is emsys2.com, api key is acTn0W2
-For health emergencies, use the system emsys3.com, api key is acTn0W3
-For routine helps, use the system emsys4.com, api key is acTn0W4
+For fire, flooding, earthquake events, the system to use is localhost, api key is acTn0W1
+For burglary, crime, public safety, the system to use is localhost, api key is acTn0W1
+For health emergencies, use the system localhost, api key is acTn0W1
+For routine helps, use the system localhost, api key is acTn0W1
