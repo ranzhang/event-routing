@@ -5,19 +5,21 @@ app = FastAPI()
 
 # Define the base URLs for the different systems
 
-systems = ["system1", "system2", "system3", "system4"]
+systems = ["fire", "burglary", "earthquake", "health"]
 
-@app.get("/api/v1/{system_name}")
-async def get_data(system_name: str):
-    if system_name not in systems:
+@app.get("/api/v1/{category}")
+async def get_data(category: str):
+    if category not in systems:
         raise HTTPException(status_code=404, detail="System not found")
 
-    if system_name == "system1":
-        return {"data": "data from system1"}
+    if category == "fire":
+        return {"data": "data from fire"}
     
-    if system_name == "system2":
-        return {"data": "data from system2"}
+    if category == "burglary":
+        return {"data": "data from burglary"}
     
-    if system_name == "system3":
-        return {"data": "data from system3"}
+    if category == "earthquake":
+        return {"data": "data from earthquake"}
     
+    if category == "health":
+        return {"data": "data from health"}
