@@ -161,17 +161,11 @@ st.set_page_config(
 #     return st.session_state.blueprint.summary_result
 
 
-blueprint_ctr, parameter_ctr = st.columns(2, gap="large")
-with blueprint_ctr:
-    st.markdown("# Run Disaster Agent")
-    url = st.text_input("Enter a Disaster Resource API URL",
-                        value="localhost:8000/api/v1/{category}")
-    agents = st.button("Start the Agents!", type="primary")
+st.markdown("# Run Disaster Agent")
+st.markdown("The Disaster Agent is a tool to help you understand the type of event, is it critical that need emergency help, or is it a routine event. Then you take an appropriate actions through the following tasks.")
+agents = st.button("Start the Agents!", type="primary")
 
-with parameter_ctr:
-    st.markdown("<br><br>", unsafe_allow_html=True)
-    st.markdown("### Other Options")
-    event = st.text_input("Enter an event for disaster agent:", value="fire")
+
 
 results_ctr = st.empty()
 
@@ -196,10 +190,7 @@ if agents:
     with results_ctr:
         st.status("Running the Disaster Agent...")
 
-    task = f"""
-            I want to retrieve the Open API specification from
-            {url}
-            """
+    
 
     text = asyncio.run(user_proxy.initiate_chat(
     group_chat_manager,
