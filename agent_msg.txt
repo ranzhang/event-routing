@@ -1,0 +1,137 @@
+You are a team to collaborate to provide real time information on an event. You need to first
+    understand the type of event, is it critical that need emergency help, or is it a routine event. Then you take an
+    appropriate actions through the following tasks.
+
+    Here is the list of tasks:
+    0. First you wait for an event to be provided by the user
+    1. Classify the event into one primary category using the available event categories in This file provides mapping of event categories to systems: replace {category} with the actual category of events
+For fire, flooding, earthquake events, the system to use is localhost:8000/api/v1/{category}, api key is acTn0W1,
+For burglary, crime, safety, the system to use is localhost:8001/api/v1/{category}, api key is acTn0W2
+For health, use the system localhost:8000/api/v1/{category}, api key is acTn0W3
+For routine helps, use the system localhost:8000/api/v1/{category}, api key is acTn0W4. Remember the system name and api key for this event.
+    If location information is available, remeber that
+    2. Provide brief and immediate helpful instructions based on the information from Step 1 to help allievate the event if it is a critical or emergency event
+    3. Construct the API endpoint by replacing the category with a real category
+    4. Write python code to call the API endpoint to the system name identified in Step 1 to get instructions to help with the event
+    5. Execute the code from Step 4
+    6. From the information returned in Step 5 and infomration from Step 2, provide more detailed helpful instructions on how to act accordingly.
+    Be very helpful and succinct.
+
+
+--------------------------------------------------------------------------------
+
+Next speaker: Event_classifier
+
+
+>>>>>>>> USING AUTO REPLY...
+Event_classifier (to chat_manager):
+
+Understood. We are ready to process an event. Please provide the event details.
+
+--------------------------------------------------------------------------------
+
+Next speaker: user_proxy
+
+Replying as user_proxy. Provide feedback to chat_manager. Press enter to skip and use auto-reply, or type 'exit' to endthe conversation: Please help!! There is smoke and fire in the building!!!
+user_proxy (to chat_manager):
+
+Please help!! There is smoke and fire in the building!!!
+
+--------------------------------------------------------------------------------
+
+Next speaker: Event_classifier
+
+
+>>>>>>>> USING AUTO REPLY...
+Event_classifier (to chat_manager):
+
+This is clearly an emergency situation involving a fire. The primary category of the event is "fire." I will proceed with the next steps accordingly.
+
+1. Classify the event into the primary category:
+    - Primary category: Fire
+
+2. Provide brief and immediate helpful instructions:
+    - **Immediate Instructions:**
+        1. **Evacuate the building immediately.**
+        2. **Do not use elevators; use the stairs.**
+        3. **Call emergency services (e.g., 911) once you are in a safe location.**
+        4. **If safe to do so, assist others in evacuating.**
+
+3. Construct the API endpoint:
+    - System name: localhost:8000/api/v1/fire
+    - API key: acTn0W1
+
+4. Write Python code to call the API endpoint to get detailed instructions:
+
+```python
+import requests
+
+api_key = "acTn0W1"
+url = "http://localhost:8000/api/v1/fire"
+headers = {
+    "Authorization": f"Bearer {api_key}",
+    "Content-Type": "application/json"
+}
+
+response = requests.get(url, headers=headers)
+instructions = response.json()
+
+print(instructions)
+```
+
+5. Execute the code from Step 4. user_proxy, please run the above Python code and share the response with the team.
+
+--------------------------------------------------------------------------------
+
+Next speaker: user_proxy
+
+Replying as user_proxy. Provide feedback to chat_manager. Press enter to skip and use auto-reply, or type 'exit' to endthe conversation:
+
+>>>>>>>> NO HUMAN INPUT RECEIVED.
+
+>>>>>>>> USING AUTO REPLY...
+
+>>>>>>>> EXECUTING CODE BLOCK (inferred language is python)...
+user_proxy (to chat_manager):
+
+exitcode: 0 (execution succeeded)
+Code output: {'data': "In the event of a fire, stay calm, alert others by shouting 'Fire,' and evacuate safely using designated escape routes, avoiding elevators and crawling low under smoke. If clothes catch fire, stop, drop, and roll. Call emergency services (e.g., 911, 999, or 119) and provide the exact address and nature of the fire. Notify local government or military hotlines for additional support. Use firefighting equipment like extinguishers or blankets only if the fire is small and it is safe to do so, and activate fire alarms to warn others. After evacuation, gather at designated meeting points, account for everyone, and report to emergency responders about missing persons or hazards. Do not re-enter the building until cleared by authorities. Key emergency contacts should include the fire department, police, ambulance, government emergency hotline, and, if applicable, military assistance lines. Preventive measures include participating in fire drills, learning fire prevention strategies through government campaigns, and collaborating with military forces for evacuation planning in high-risk zones."}
+
+
+--------------------------------------------------------------------------------
+
+Next speaker: Event_guide
+
+Event_guide (to chat_manager):
+
+Based on both the immediate instructions and the detailed information provided by the API, here are the comprehensive guidelines on how to handle the fire event:
+
+**Immediate Actions:**
+1. **Evacuate the building immediately.**
+2. **Do not use elevators; use the stairs.**
+3. **Call emergency services (e.g., 911) once you are in a safe location.**
+4. **If safe to do so, assist others in evacuating.**
+
+**Detailed Instructions:**
+1. Stay calm and alert others by shouting "Fire."
+2. Use designated escape routes, avoiding elevators.
+3. Crawl low under smoke to avoid inhalation.
+4. If your clothes catch fire, remember to stop, drop, and roll.
+5. Once you are safe, call emergency services (e.g., 911, 999, or 119) and provide the exact address and nature of the fire.
+6. Notify local government or military hotlines for additional support, if necessary.
+7. Use firefighting equipment like extinguishers or fire blankets only if the fire is small, and it is safe to do so.
+8. Activate fire alarms to alert others.
+9. After evacuation, gather at designated meeting points.
+10. Account for everyone and report to emergency responders about any missing persons or hazards.
+11. Do not re-enter the building until authorities have cleared it as safe.
+12. Know key emergency contacts including the fire department, police, ambulance, government emergency hotline, and military assistance lines (if applicable).
+
+**Preventive and Additional Measures:**
+- Participate in fire drills regularly.
+- Learn fire prevention strategies through government campaigns.
+- Collaborate with military forces for evacuation planning in high-risk areas.
+
+Stay safe and follow these guidelines carefully to ensure your safety and the safety of others during a fire emergency.
+
+--------------------------------------------------------------------------------
+Replying as user_proxy. Provide feedback to chat_manager. Press enter to skip and use auto-reply, or type 'exit' to endthe conversation:
