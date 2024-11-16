@@ -1,4 +1,4 @@
-# AI-powered automated event-routing and response system
+# Project Neo: an AI-powered automated event-routing and response system
 
 This system takes a user event message and determines the category of the event. An event could be a critical emergency event or a routine event, as determined by the user. From that it will construct the API endpoint and generate Python code to call the endpoint. The system will then make the API call to get a response and provide instructions how to handle the event to users.
 
@@ -13,4 +13,8 @@ fastapi dev service/main.py
 
 You may need to install the package before that:
 pip install fastapi
+
+To start the project:
+streamlit run welcome.py
+
 
